@@ -1,0 +1,22 @@
+[
+  {
+    "id": "facts",
+    "title": "Facts",
+    "description": "Evidence-based information and data analysis."
+  },
+  {
+    "id": "reviews",
+    "title": "Reviews",
+    "description": "Critical evaluations of existing literature and media."
+  },
+  {
+    "id": "debunks",
+    "title": "Debunks",
+    "description": "Addressing misconceptions and verifying claims."
+  },
+  {
+    "id": "links",
+    "title": "Links",
+    "description": "Further reading and external resources."
+  }
+]
