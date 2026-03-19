@@ -1,19 +1,74 @@
-# React + Vite
+# Love, Care, or Harm? – Understanding AI Companions
+**AIDM7350 Group Project**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A digital exploration into the complexities of human-AI relationships, examining the boundaries between intimacy, dependency, and potential harm.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Project Overview
+This project is a modern, responsive Single-Page Application (SPA) designed to present research findings on AI companionship. It guides users through a structured narrative covering factual data, academic reviews, common misconceptions (debunks), and curated resources.
 
-## React Compiler
+The goal is to provide a balanced perspective on how AI companions are reshaping contemporary digital life.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
+- **Immersive Hero Section**: Featuring a "breathing" wave animation and staggered text reveal powered by **Framer Motion**.
+- **Seamless Navigation**: Smooth-scrolling anchor navigation connecting four core content modules:
+  - **Facts**: Quantitative data and definitions.
+  - **Reviews**: Critical analysis from literature.
+  - **Debunks**: Addressing myths and misunderstandings.
+  - **Links**: A curated library of academic papers, news, and support tools.
+- **Modern UI/UX**: Built with **Tailwind CSS v4**, featuring a custom color palette (Olive, Rose, Charcoal, Off-white) and responsive grid layouts.
+- **Dynamic Content**: Content is managed via JSON data files for easy updates without touching the UI code.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: Heroicons & Custom SVG
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
 
-## 运行
-`npm run dev`
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/2578922967-hash/AIDM7350_Group_Project.git
+   cd AIDM7350_Group_Project
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173`.
+
+## 📂 Project Structure
+```text
+src/
+├── components/       # Reusable UI components
+│   ├── Hero.jsx      # Landing section with animations
+│   ├── LinksSection.jsx # Categorized resource links with custom animations
+│   ├── ArticleCard.jsx  # Card component for content previews
+│   └── Navbar.jsx    # Sticky navigation with mobile menu
+├── data/             # Content data sources
+│   ├── links.json    # External resource URLs
+│   └── outline.json  # Main content structure
+└── App.jsx           # Main application layout
+```
+
+## 👥 Contributors (Roles)
+- **Richyy**
+- **Small7**
+- **Big7**
+- **LIN**
+
+## 📄 License
+This project is created for educational purposes within the **AIDM7350** course. All rights reserved by the project team.
