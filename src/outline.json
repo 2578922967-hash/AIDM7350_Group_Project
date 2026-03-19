@@ -2,21 +2,46 @@
   {
     "id": "facts",
     "title": "Facts",
-    "description": "Evidence-based information and data analysis."
+    "description": "Evidence and data analysis on AI Companions.",
+    "sections": [
+      "What Are AI Companions?",
+      "Why Do People Use Them?",
+      "How Do AI Companions Simulate Intimacy?",
+      "What Makes AI Companions Different from Ordinary Chatbots?"
+    ]
   },
   {
     "id": "reviews",
     "title": "Reviews",
-    "description": "Critical evaluations of existing literature and media."
+    "description": "Critical evaluations of literature and media.",
+    "sections": [
+      "How Is Harm Understood in AI Companionship?",
+      "What Do Academic Reviews Tell Us?",
+      "What Do User Experience Reviews Reveal?"
+    ]
   },
   {
     "id": "debunks",
     "title": "Debunks",
-    "description": "Addressing misconceptions and verifying claims."
+    "description": "Addressing misconceptions about AI relationships.",
+    "sections": [
+      "If a user knows it is AI, they will not be emotionally attached.",
+      "AI companions are just harmless chatbots.",
+      "AI companions can solve all loneliness.",
+      "The more human-like an AI is the better.",
+      "The root cause of all the problems can be traced to a user’s over-dependency."
+    ]
   },
   {
     "id": "links",
     "title": "Links",
-    "description": "Further reading and external resources."
+    "description": "Further reading and external resources.",
+    "sections": [
+      "Academic Readings",
+      "News and Media",
+      "Platforms",
+      "Mental Health / Support Resources"
+    ]
   }
 ]
+

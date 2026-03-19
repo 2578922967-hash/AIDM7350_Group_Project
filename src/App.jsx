@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import ArticleCard from './components/ArticleCard'
+import LinksSection from './components/LinksSection'
 import outline from './outline.json'
 
 function App() {
@@ -27,9 +28,10 @@ function App() {
             {outline.map((item) => (
               <ArticleCard 
                 key={item.id}
-                category={item.id} // e.g., "facts", "reviews"
+                // category={item.id} // Hide category tag to avoid redundancy with title
                 title={item.title}
                 summary={item.description}
+                sections={item.sections}
                 link={`#${item.id}`} // Placeholder link
               />
             ))}
@@ -56,6 +58,9 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* Links Section */}
+        <LinksSection />
 
       </main>
 

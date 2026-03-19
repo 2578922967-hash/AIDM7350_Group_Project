@@ -1,0 +1,108 @@
+{
+  "academic": [
+    {
+      "title": "The dark side of ai companionship: A taxonomy of harmful algorithmic behaviors in human-ai relationships",
+      "author": "Zhang, R., Li, H., et al. (2025)",
+      "url": "https://dl.acm.org/doi/full/10.1145/3706598.3713429",
+      "description": "Explores harmful algorithmic behaviors in AI relationships."
+    },
+    {
+      "title": "Ethical tensions in human-AI companionship: A dialectical inquiry into Replika",
+      "author": "Ciriello, R., Hannon, O., et al. (2024)",
+      "url": "https://aisel.aisnet.org/hicss-57/cl/ethics/5/",
+      "description": "Investigates ethical dilemmas in Replika."
+    },
+    {
+      "title": "AI-induced sexual harassment: Investigating Contextual Characteristics and User Reactions",
+      "author": "Namvarpour, M., Pauwels, H., & Razi, A. (2025)",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3757548",
+      "description": "Studies sexual harassment by companion chatbots."
+    },
+    {
+      "title": "From Lived Experience to Insight: Unpacking the Psychological Risks of Using AI Conversational Agents",
+      "author": "Chandra, M., Naik, S., et al. (2025)",
+      "url": "https://dl.acm.org/doi/full/10.1145/3715275.3732063",
+      "description": "Analyzes psychological risks of AI conversational agents."
+    }
+  ],
+  "news_media": [
+    {
+      "title": "A worrying truth about AI boyfriends and girlfriends has been discovered",
+      "source": "Indy100",
+      "year": 2025,
+      "url": "https://www.indy100.com/science-tech/ai-boyfriends-girlfriends-dark-truth"
+    },
+    {
+      "title": "Character.ai to ban teens from talking to its AI chatbots",
+      "source": "BBC",
+      "year": 2025,
+      "url": "https://www.bbc.com/news/articles/cq837y3v9y1o"
+    },
+    {
+      "title": "Mom who sued Character.AI over son's suicide says the platform's new teen policy comes 'too late'",
+      "source": "NBC News",
+      "year": 2025,
+      "url": "https://www.nbcnews.com/tech/tech-news/characterai-bans-minors-response-megan-garcia-parent-suing-company-rcna240985"
+    },
+    {
+      "title": "Replika users fell in love with their AI chatbot companions. Then they lost them",
+      "source": "ABC News",
+      "year": 2023,
+      "url": "https://www.abc.net.au/news/science/2023-03-01/replika-users-fell-in-love-with-their-ai-chatbot-companion/102028196"
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Replika",
+      "url": "https://replika.com/",
+      "description": "The AI companion who cares. Always here to listen and talk. Always on your side."
+    },
+    {
+      "name": "Character.AI",
+      "url": "https://character.ai/",
+      "description": "Chat with AI characters, or create your own."
+    },
+    {
+      "name": "Nomi",
+      "url": "https://nomi.ai/",
+      "description": "AI companionship with persistent memory and personality."
+    },
+    {
+      "name": "Kindroid",
+      "url": "https://landing.kindroid.ai/",
+      "description": "Realistic AI companions with distinct personalities and visuals."
+    },
+    {
+      "name": "Pi",
+      "url": "https://pi.ai/",
+      "description": "A supportive and empathetic personal AI."
+    }
+  ],
+  "support_resources": [
+    {
+      "name": "988 Lifeline",
+      "url": "https://988lifeline.org/",
+      "description": "24/7 free and confidential support for people in distress."
+    },
+    {
+      "name": "Google Digital Wellbeing",
+      "url": "https://wellbeing.google/",
+      "description": "Tools and tips to help you find a balance with technology."
+    },
+    {
+      "name": "Common Sense Media",
+      "url": "https://www.commonsensemedia.org/",
+      "description": "Reviews and advice for parents on media and technology."
+    },
+    {
+      "name": "APA (American Psychological Association)",
+      "url": "https://www.apa.org/topics/social-media-internet",
+      "description": "Resources on technology, social media, and mental health."
+    },
+    {
+      "name": "Partnership on AI",
+      "url": "https://partnershiponai.org/",
+      "description": "Guidelines for responsible AI development and deployment."
+    }
+  ]
+}

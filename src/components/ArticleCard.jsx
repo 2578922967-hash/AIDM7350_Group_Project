@@ -1,4 +1,6 @@
-export default function ArticleCard({ category, title, summary, link, variant = "base" }) {
+import { motion } from 'framer-motion';
+
+export default function ArticleCard({ category, title, summary, sections = [], link, variant = "base", delay = 0 }) {
   // Styles based on variant if needed
   const tagColors = {
     facts: "bg-[#7A9E7E]/10 text-[#7A9E7E]",
@@ -11,7 +13,14 @@ export default function ArticleCard({ category, title, summary, link, variant = 
   const tagCls = tagColors[category?.toLowerCase()] || tagColors.default;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 flex flex-col items-start border border-[#E5E7EB]">
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, delay: delay * 0.1 }}
+      whileHover={{ y: -8, boxShadow: "0 10px 30px -10px rgba(0,0,0,0.1)" }}
+      className="bg-white rounded-xl shadow-sm transition-all duration-300 p-6 flex flex-col items-start border border-[#E5E7EB] h-full"
+    >
       {category && (
         <span className={`px-3 py-1 text-xs font-semibold rounded-full uppercase tracking-wide mb-4 ${tagCls}`}>
           {category}
@@ -22,24 +31,38 @@ export default function ArticleCard({ category, title, summary, link, variant = 
         {title}
       </h3>
 
-      <p className="text-[#6B7280] font-sans text-base leading-relaxed mb-6 line-clamp-3 flex-grow">
+      <p className="text-[#6B7280] font-sans text-base leading-relaxed mb-6 line-clamp-3">
         {summary}
       </p>
 
-      <a
-        href={link || "#"}
-        className="inline-flex items-center text-[#C08497] font-medium hover:text-[#B85C5C] transition-colors group"
-      >
-        Read More
-        <svg
-          className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      {sections && sections.length > 0 && (
+        <ul className="mb-6 space-y-2 w-full">
+          {sections.map((sec, idx) => (
+            <li key={idx} className="text-sm text-[#6B7280] flex items-start gap-2">
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E5E7EB] shrink-0"></span>
+              <span>{sec}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+          
+      <div className="mt-auto pt-4 border-t border-[#E5E7EB] w-full">
+        <a
+          href={link || "#"}
+          className="inline-flex items-center text-[#C08497] font-medium hover:text-[#B85C5C] transition-colors group"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
-    </div>
+          Read More
+          <svg
+            className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </motion.div>
   );
 }
