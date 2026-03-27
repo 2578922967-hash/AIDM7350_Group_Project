@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import Footer from './components/Footer'
 import ArticleCard from './components/ArticleCard'
 import LinksSection from './components/LinksSection'
+import FactsSection from './components/FactsSection'
+import ReviewsSection from './components/ReviewsSection'
 import outline from './outline.json'
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
       {/* Main Content Sections */}
       <main className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
         
-        {/* Entry Cards Section */}
+        {/* Entry Cards Section (Table of Contents) */}
         <section id="features" className="scroll-mt-24">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-serif font-bold text-[#1F2937] mb-4">Core Sections</h2>
@@ -28,15 +30,21 @@ function App() {
             {outline.map((item) => (
               <ArticleCard 
                 key={item.id}
-                // category={item.id} // Hide category tag to avoid redundancy with title
+                category={item.id}
                 title={item.title}
                 summary={item.description}
                 sections={item.sections}
-                link={`#${item.id}`} // Placeholder link
+                link={`#${item.id}-content`}
               />
             ))}
           </div>
         </section>
+
+        {/* Part 1: Facts */}
+        <FactsSection />
+
+        {/* Part 2: Reviews */}
+        <ReviewsSection />
 
         {/* Example Insight Box from PDF */}
         <section className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#E5E7EB] relative overflow-hidden">
