@@ -21,7 +21,7 @@ const LinkItem = ({ href, title, meta, description, mainColor, accentColor }) =>
   <div 
     className="mb-4 group p-4 rounded-lg transition-colors duration-200 border border-transparent hover:border-gray-100"
     style={{ 
-        '--hover-bg': accentColor + '40' // Add 40 for approx 25% opacity
+      backgroundColor: `${accentColor}12`
     }}
   >
     <a 
@@ -41,13 +41,6 @@ const LinkItem = ({ href, title, meta, description, mainColor, accentColor }) =>
       {meta && description && <span className="mx-2">•</span>}
       {description && <span>{description}</span>}
     </div>
-    
-    {/* Style for hover background via inline style to use dynamic colors */}
-    <style jsx>{`
-      .group:hover {
-        background-color: ${accentColor}33; /* 33 hex = ~20% opacity */
-      }
-    `}</style>
   </div>
 );
 
@@ -55,13 +48,8 @@ const LinkItem = ({ href, title, meta, description, mainColor, accentColor }) =>
 const SupportItem = ({ href, name, description, mainColor, accentColor }) => (
     <div 
       className="mb-4 block p-4 rounded-lg transition-colors duration-200 border border-transparent hover:border-[#E5E7EB] group"
-      style={{ '--hover-bg': accentColor }}
+      style={{ backgroundColor: `${accentColor}12` }}
     >
-        <style jsx>{`
-            .group:hover {
-                background-color: ${accentColor}33;
-            }
-        `}</style>
       <a 
         href={href}
         target="_blank"
