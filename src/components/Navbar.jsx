@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const navItems = [
-  { name: 'Home', href: '/' },
+  { name: 'Home', href: '#home' },
   { name: 'Facts', href: '#facts' },
   { name: 'Reviews', href: '#reviews' },
   { name: 'Debunks', href: '#debunks' },
@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="font-serif text-2xl font-bold text-[#1F2937]">
+            <a href="#home" className="font-serif text-2xl font-bold text-[#1F2937]">
               AI Companions
             </a>
           </div>

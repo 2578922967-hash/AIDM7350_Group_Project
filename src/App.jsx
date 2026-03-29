@@ -5,11 +5,19 @@ import ArticleCard from './components/ArticleCard'
 import LinksSection from './components/LinksSection'
 import FactsSection from './components/FactsSection'
 import ReviewsSection from './components/ReviewsSection'
+import DebunksSection from './components/DebunksSection'
 import outline from './outline.json'
+
+const sectionAnchorMap = {
+  facts: '#facts',
+  reviews: '#reviews',
+  debunks: '#debunks',
+  links: '#links',
+}
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#F8F6F2] font-sans selection:bg-[#E58C73]/30">
+    <div id="home" className="min-h-screen bg-[#F8F6F2] font-sans selection:bg-[#E58C73]/30">
       <Navbar />
 
       <Hero />
@@ -34,7 +42,7 @@ function App() {
                 title={item.title}
                 summary={item.description}
                 sections={item.sections}
-                link={`#${item.id}-content`}
+                link={sectionAnchorMap[item.id] || '#home'}
               />
             ))}
           </div>
@@ -45,6 +53,9 @@ function App() {
 
         {/* Part 2: Reviews */}
         <ReviewsSection />
+
+        {/* Part 3: Debunks */}
+        <DebunksSection />
 
         {/* Example Insight Box from PDF */}
         <section className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#E5E7EB] relative overflow-hidden">
@@ -69,6 +80,24 @@ function App() {
 
         {/* Links Section */}
         <LinksSection />
+
+        {/* About */}
+        <section id="about" className="scroll-mt-24 bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#E5E7EB]">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[#C08497] font-bold text-sm uppercase tracking-widest mb-2 block">About</span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1F2937] mb-5">
+              About This Project
+            </h2>
+            <p className="text-[#4B5563] leading-relaxed mb-4">
+              This website is developed for the AIDM7350 Group Project to examine how AI companions reshape
+              intimacy, emotional expectations, and perceptions of harm in digital life.
+            </p>
+            <p className="text-[#6B7280] leading-relaxed">
+              We combine concept explanations, literature reviews, myth debunks, and curated resources to help
+              readers build a clearer and more critical understanding of AI companionship.
+            </p>
+          </div>
+        </section>
 
       </main>
 
