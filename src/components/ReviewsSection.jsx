@@ -49,7 +49,7 @@ const ContentBlock = ({ title, content, index }) => {
 
 const ReviewsSection = () => {
     return (
-        <section className="py-20 bg-[#F8F6F2]" id="reviews-content">
+        <section className="py-20 bg-[#F8F6F2] scroll-mt-24" id="reviews">
             <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">

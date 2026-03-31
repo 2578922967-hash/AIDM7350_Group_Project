@@ -50,7 +50,7 @@ const ContentBlock = ({ title, content, index }) => {
 
 const FactsSection = () => {
     return (
-        <section className="py-20 bg-white" id="facts-content">
+        <section className="py-20 bg-white scroll-mt-24" id="facts">
             <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
