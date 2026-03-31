@@ -11,10 +11,10 @@ export default function Footer() {
         </p>
 
         <div className="flex space-x-6 mb-8 text-[#C08497] font-serif italic">
-          <span>Richyy</span>
-          <span>Small7</span>
-          <span>Big7</span>
-          <span>LIN</span>
+          <span>LI JIHANG</span>
+          <span>MENG XIAOQI</span>
+          <span>LI ZIQI</span>
+          <span>LIN LESHI</span>
         </div>
 
         <div className="text-sm text-[#6B7280] border-t border-[#E5E7EB] pt-8 w-full text-center">

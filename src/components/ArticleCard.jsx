@@ -21,12 +21,6 @@ export default function ArticleCard({ category, title, summary, sections = [], l
       whileHover={{ y: -8, boxShadow: "0 10px 30px -10px rgba(0,0,0,0.1)" }}
       className="bg-white rounded-xl shadow-sm transition-all duration-300 p-6 flex flex-col items-start border border-[#E5E7EB] h-full"
     >
-      {category && (
-        <span className={`px-3 py-1 text-xs font-semibold rounded-full uppercase tracking-wide mb-4 ${tagCls}`}>
-          {category}
-        </span>
-      )}
-
       <h3 className="font-serif text-2xl text-[#1F2937] mb-3 leading-tight font-bold">
         {title}
       </h3>

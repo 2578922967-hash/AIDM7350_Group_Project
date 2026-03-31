@@ -61,7 +61,7 @@ function App() {
         <section className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#E5E7EB] relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10">
              <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm0-4h-2V7h2v7z"/>
              </svg>
           </div>
           
@@ -73,7 +73,7 @@ function App() {
             </p>
             <div className="flex items-center gap-4">
                <span className="h-px bg-[#E5E7EB] flex-grow w-16"></span>
-               <span className="text-sm text-[#1F2937] font-medium">Research Team</span>
+               <span className="text-sm text-[#1F2937] font-medium">AIDM7350 Group</span>
             </div>
           </div>
         </section>
