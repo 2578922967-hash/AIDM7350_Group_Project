@@ -1,34 +1,52 @@
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { siteContent } from '../data/content';
 
-const myths = [
-  {
-    myth: "Does knowing it's AI really stop us from falling in love?",
-    reality:
-      "Knowing does not always prevent attachment. Repeated emotionally responsive interaction can still create strong relational feelings.",
-  },
-  {
-    myth: 'Are AI companions truly just harmless chatbots?',
-    reality:
-      'Not always. They can offer support, but can also introduce dependency, blurred boundaries, and emotional disappointment.',
-  },
-  {
-    myth: 'Can AI companions actually cure loneliness?',
-    reality:
-      'They may reduce loneliness temporarily, but they usually do not replace reciprocal human relationships in the long term.',
-  },
-  {
-    myth: 'Is making AI more human-like always the right move?',
-    reality:
-      'Human-like design improves engagement, but can also make emotional boundaries less clear and increase user vulnerability.',
-  },
-  {
-    myth: 'Is the problem really just users being too dependent?',
-    reality:
-      'No. Design choices, business incentives, and platform policies also shape risk and user outcomes.',
-  },
-];
+const DebunkBlock = ({ myth, content, index }) => {
+  const [lang, setLang] = useState('en');
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.45, delay: index * 0.06 }}
+      className="rounded-xl border border-[#E5E7EB] bg-[#F8F6F2] p-6 mb-5"
+    >
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+        <h3 className="text-xl font-serif font-bold text-[#1F2937] pr-4">
+          <span className="text-[#B85C5C] mr-2">Myth:</span>
+          {myth}
+        </h3>
+        
+        {/* Language Switcher */}
+        <div className="flex gap-2 mt-3 md:mt-0 flex-shrink-0 text-sm">
+          <button 
+            onClick={() => setLang('en')}
+            className={`px-3 py-1 rounded-full transition-colors ${lang === 'en' ? 'bg-[#B85C5C] text-white font-bold' : 'bg-[#E5E7EB] text-[#6B7280] hover:bg-[#d1d5db]'}`}
+          >
+            English
+          </button>
+          <button 
+            onClick={() => setLang('cn')}
+            className={`px-3 py-1 rounded-full transition-colors ${lang === 'cn' ? 'bg-[#B85C5C] text-white font-bold' : 'bg-[#E5E7EB] text-[#6B7280] hover:bg-[#d1d5db]'}`}
+          >
+            中文
+          </button>
+        </div>
+      </div>
+
+      <div className="text-[#4B5563] leading-relaxed whitespace-pre-line">
+        <span className="block font-semibold text-[#B85C5C] mb-2">{lang === 'en' ? 'Reality:' : '真相：'}</span>
+        {content[lang]}
+      </div>
+    </motion.article>
+  );
+};
 
 export default function DebunksSection() {
+  const debunks = siteContent.debunks || [];
+
   return (
     <section id="debunks" className="scroll-mt-24 py-20 bg-white rounded-2xl border border-[#E5E7EB] shadow-sm">
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,20 +76,13 @@ export default function DebunksSection() {
         </div>
 
         <div className="space-y-5">
-          {myths.map((item, index) => (
-            <motion.article
-              key={item.myth}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.45, delay: index * 0.06 }}
-              className="rounded-xl border border-[#E5E7EB] bg-[#F8F6F2] p-6"
-            >
-              <h3 className="text-xl font-serif font-bold text-[#1F2937] mb-3">Myth: {item.myth}</h3>
-              <p className="text-[#4B5563] leading-relaxed">
-                <span className="font-semibold text-[#B85C5C]">Reality:</span> {item.reality}
-              </p>
-            </motion.article>
+          {debunks.map((item, index) => (
+            <DebunkBlock 
+              key={item.title}
+              myth={item.title}
+              content={item.content}
+              index={index}
+            />
           ))}
         </div>
       </div>
