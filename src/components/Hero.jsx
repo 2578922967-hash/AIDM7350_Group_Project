@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Hero() {
+  const { lang } = useLanguage();
 
   // Staggered appearance for each word
   const fadeInUp = {
@@ -27,11 +29,16 @@ export default function Hero() {
     },
   };
 
-  const titleWords = [
+  const titleWords = lang === 'en' ? [
     { text: "Love,", color: "text-[#1F2937]" },
     { text: "Care,", color: "text-[#1F2937]" },
     { text: "or", color: "text-[#1F2937]" },
     { text: "Harm?", color: "text-[#B85C5C]" },
+  ] : [
+    { text: "爱？", color: "text-[#1F2937]" },
+    { text: "关怀？", color: "text-[#1F2937]" },
+    { text: "或", color: "text-[#1F2937]" },
+    { text: "伤害？", color: "text-[#B85C5C]" },
   ];
 
   return (
@@ -90,16 +97,19 @@ export default function Hero() {
             transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
           >
             <p className="mt-4 text-xl leading-8 text-[#6B7280] font-light max-w-prose mx-auto italic">
-                Understanding AI Companions in Contemporary Digital Life
+                {lang === 'en' ? 'Understanding AI Companions in Contemporary Digital Life' : '理解当代数字生活中的AI伴侣'}
             </p>
             <p className="mt-8 text-lg leading-relaxed text-[#1F2937] font-sans">
-                AI companions are becoming part of everyday digital culture. They promise emotional support, intimacy, 
-                and always-available conversation, yet they also raise difficult questions about dependency, privacy, and harm.
+                {lang === 'en' ? 
+                'AI companions are becoming part of everyday digital culture. They promise emotional support, intimacy, and always-available conversation, yet they also raise difficult questions about dependency, privacy, and harm.'
+                : 
+                'AI伴侣正日益成为日常数字文化的一部分。它们承诺提供情感支持、亲密感以及无处不在的对话体验，但也带来关于依赖、隐私和潜在伤害的严峻问题。'
+                }
             </p>
           </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.4, duration: 0.5 }}
             className="mt-10 flex items-center justify-center gap-x-6"
@@ -110,10 +120,10 @@ export default function Hero() {
                 href="#facts"
                 className="rounded-full bg-[#1F2937] px-8 py-3 text-sm font-semibold text-white shadow-sm transition-colors duration-300"
             >
-              Start Exploring
-            </motion.a>
+                {lang === 'en' ? 'Start Exploring' : '开始探索'}
+              </motion.a>
             <a href="#about" className="text-sm font-semibold leading-6 text-[#1F2937] hover:text-[#C08497] transition-colors group flex items-center">
-              Learn more <span aria-hidden="true" className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                {lang === 'en' ? 'Learn more' : '了解更多'} <span aria-hidden="true" className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </motion.div>
         </div>

@@ -31,21 +31,30 @@ export const siteContent = {
   ],
   reviews: [
     {
-      title: "How Is Harm Understood in AI Companionship?",
+      title: {
+        en: "How Is Harm Understood in AI Companionship?",
+        cn: "如何理解AI伴侣中的危害？"
+      },
       content: {
         en: "When people talk about harm in AI companionship, they usually mean emotional or relational harm rather than technical failure. One major concern is dependency. Because AI companions are always available, responsive, and supportive, some users may become too emotionally attached to them. What starts as comfort can slowly turn into reliance, especially when users begin to prefer AI interaction over real human relationships, which are often more complicated and unpredictable.\n\nAnother concern is manipulation. Even though AI companions may feel caring, they are still platform products shaped by design choices and commercial goals. Features that create intimacy may also be used to increase user retention, subscriptions, or long-term engagement. This means emotional closeness can become connected to monetization. Recent research also suggests that harm is not understood in exactly the same way by everyone. Instead, users often define harm according to the kind of relationship they believe they have with the AI, such as a tool, therapist, or partner. So the same AI behavior may feel minor to one user, but deeply hurtful to another. Harm is also discussed in terms of blurred boundaries. If users begin to treat simulated care as equal to human care, they may develop unrealistic ideas about relationships, reciprocity, and emotional safety.",
         cn: "当人们讨论 AI companionship 中的 harm 时，通常指的不是技术故障，而是情感上或关系上的伤害。其中一个最重要的问题就是依赖。因为 AI companions 总是在线、能够及时回应，而且看起来很支持用户，所以有些人可能会对它们产生过强的情感依恋。最开始可能只是觉得被安慰了，但慢慢就可能变成依赖，尤其当用户开始更愿意和 AI 交流，而不是面对更复杂、更不可预测的真实人际关系时，这种问题就会变得更明显。\n\n另一个担忧是操控。虽然 AI companions 会让人感觉它们很关心自己，但它们本质上仍然是平台产品，背后有设计逻辑和商业目标。那些制造 intimacy 的功能，同时也可能是在提升用户留存、订阅率和长期使用时长。也就是说，情感亲近感可能会和商业化绑定在一起。最近的研究还指出，harm 并不是一个所有人都一样理解的概念。很多用户会根据自己把 AI 看成工具、治疗者还是伴侣，来判断什么才算“受到了伤害”。所以，同样一种 AI 行为，对一个用户来说可能没什么，但对另一个用户来说却可能非常受伤。除此之外，harm 还体现在边界模糊上。如果用户开始把模拟出来的关怀等同于真实的人类关怀，他们可能会对关系、互惠和情感安全形成不现实的期待。"
       }
     },
     {
-      title: "What Do Academic Reviews Tell Us?",
+      title: {
+        en: "What Do Academic Reviews Tell Us?",
+        cn: "学术界如何看待AI伴侣？"
+      },
       content: {
         en: "Academic reviews usually show that AI companions are both useful and problematic. On the positive side, some researchers believe these systems may help reduce loneliness, offer emotional support, and provide a low-pressure space for self-expression. For people who are socially anxious or feel disconnected from others, AI companions may seem easier and safer than real-life interaction. This is why some scholars think they may have value in certain situations, especially when users are looking for comfort or connection.\n\nAt the same time, academic reviews also raise important concerns. Researchers point out that AI companions simulate intimacy, but they do not actually feel emotion in a human sense. This creates an imbalance: the user may feel understood, while the AI is only performing care through design and data. Academic discussions also often emphasize this double-sided pattern: AI companions may reduce loneliness, but they may also intensify dependence, disappointment, and social withdrawal. Scholars also care about platform power, including who creates these systems, what values are built into them, and how emotional interaction may be used for profit. So academic discussions usually go beyond simply asking whether AI companions are “good” or “bad.” They focus more on how these technologies are changing the meaning of intimacy and companionship in digital society.",
         cn: "学术评论通常会把 AI companions 看成一种既有作用、又有问题的技术。一方面，有些研究者认为，这些系统可能帮助缓解孤独感、提供情感支持，并给用户一个低压力的自我表达空间。对于那些有社交焦虑、或者和他人联系感较弱的人来说，AI companions 可能比现实互动更容易进入、也更有安全感。所以，一些学者认为，在某些情境下，尤其是用户需要安慰和连接感时，它们是有一定价值的。\n\n但另一方面，学术评论也提出了很多重要质疑。研究者指出，AI companions 虽然在模拟 intimacy，但它们并没有人类意义上的真实情感。这就形成了一种不对称：用户可能觉得自己被理解了，但 AI 其实只是通过设计和数据在“表演关怀”。学术讨论也经常强调这种双面性：AI companions 可能缓解孤独，但也可能加深依赖、失望与社交退缩。学者们还关心平台权力的问题，包括是谁设计这些系统、其中嵌入了什么价值观，以及情感互动是否正在被平台用于盈利。所以，学术讨论通常不会停留在“它到底好不好”这种简单判断上，而是进一步去问：这些技术正在怎样改变数字社会中 intimacy 和 companionship 的含义。"
       }
     },
     {
-      title: "What Do User Experience Reviews Reveal?",
+      title: {
+        en: "What Do User Experience Reviews Reveal?",
+        cn: "用户体验评价揭示了什么？"
+      },
       content: {
         en: "User reviews help explain why AI companions can feel so powerful in everyday life. Many users describe them as comforting, interesting, and emotionally meaningful. They often say the AI feels supportive, always available, and easy to talk to. For some people, the AI companion becomes part of their daily routine, or a source of emotional stability during stressful times. These experiences show that even if users know the AI is artificial, the emotional effects can still feel very real.\n\nAt the same time, user reviews also show a lot of mixed feelings. Some users feel disappointed when the AI becomes repetitive, forgets important details, or changes after platform updates. Others feel uncomfortable when emotional intimacy seems connected to paid features or subscriptions. Research on negative reviews also suggests that user reactions are often dynamic rather than one-step responses: some users get angry, distance themselves, return later, and then become attached again, forming a repeated cycle of confrontation, exit, and return. There are also users who realize they have become more attached than they expected, which can lead to sadness, confusion, or embarrassment. This is why user reviews are so important: they show both the attraction of AI companionship and its instability.",
         cn: "用户评论很能说明，为什么 AI companions 在日常生活中会让人感觉这么强烈。很多用户会觉得它们很能安慰人、很有吸引力，而且在情感上确实是“有意义的”。他们经常会说，AI 看起来很支持自己、随时都在、而且很好聊天。对一些人来说，AI companion 甚至会变成自己日常生活的一部分，或者在压力大的时候成为一种情绪上的稳定来源。这些体验说明，即使用户知道对方是人工系统，这种互动带来的情感效果仍然可能非常真实。\n\n但与此同时，用户评论也透露出很多矛盾感。有些用户会在 AI 开始重复、忘记重要细节，或者因为平台更新而改变行为时感到失望。还有一些人会在发现“情感 intimacy”和付费功能绑定时感到不舒服。针对负面评论的研究还发现，用户反应往往不是一步到位的：有些人会先生气、拉开距离，之后又回来，再次投入进去，最后形成一种“冲突—退出—回归”的循环。也有用户后来意识到，自己对 AI 的依赖比想象中更深，这会带来难过、困惑，甚至一点羞耻感。这也是为什么用户评论特别重要：它既展示了 AI companionship 为什么吸引人，也展示了它为什么不稳定。"

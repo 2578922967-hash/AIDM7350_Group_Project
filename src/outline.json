@@ -1,47 +1,46 @@
 [
   {
     "id": "facts",
-    "title": "Facts",
-    "description": "Evidence and data analysis on AI Companions.",
+    "title": { "en": "Facts", "cn": "事实" },
+    "description": { "en": "Evidence and data analysis on AI Companions.", "cn": "关于AI伴侣的证据与数据分析。" },
     "sections": [
-      "What Are AI Companions?",
-      "Why Do People Use Them?",
-      "How Do AI Companions Simulate Intimacy?",
-      "What Makes AI Companions Different from Ordinary Chatbots?"
+      { "en": "What Are AI Companions?", "cn": "什么是AI伴侣？" },
+      { "en": "Why Do People Use Them?", "cn": "为什么人们使用它们？" },
+      { "en": "How Do AI Companions Simulate Intimacy?", "cn": "AI伴侣如何模拟亲密关系？" },
+      { "en": "What Makes AI Companions Different from Ordinary Chatbots?", "cn": "AI伴侣与普通聊天机器人有何不同？" }
     ]
   },
   {
     "id": "reviews",
-    "title": "Reviews",
-    "description": "Critical evaluations of literature and media.",
+    "title": { "en": "Reviews", "cn": "文献综述" },
+    "description": { "en": "Critical evaluations of literature and media.", "cn": "相关文献和媒体论述的批评性评估。" },
     "sections": [
-      "How Is Harm Understood in AI Companionship?",
-      "What Do Academic Reviews Tell Us?",
-      "What Do User Experience Reviews Reveal?"
+      { "en": "How Is Harm Understood in AI Companionship?", "cn": "在AI伴侣的语境下，如何理解“伤害”？" },
+      { "en": "What Do Academic Reviews Tell Us?", "cn": "学术研究告诉我们什么？" },
+      { "en": "What Do User Experience Reviews Reveal?", "cn": "用户体验反馈揭示了什么？" }
     ]
   },
   {
     "id": "debunks",
-    "title": "Debunks",
-    "description": "Addressing misconceptions about AI relationships.",
+    "title": { "en": "Debunks", "cn": "辟谣" },
+    "description": { "en": "Addressing misconceptions about AI relationships.", "cn": "澄清对AI伴侣关系的常见误解。" },
     "sections": [
-      "Does knowing it's AI really stop us from falling in love?",
-      "Are AI companions truly just harmless chatbots?",
-      "Can AI companions actually cure loneliness?",
-      "Is making AI more human-like always the right move?",
-      "Is the problem really just users being too dependent?"
+      { "en": "Does knowing it's AI really stop us from falling in love?", "cn": "难道知道对方是AI，我们就不会产生感情吗？" },
+      { "en": "Are AI companions truly just harmless chatbots?", "cn": "AI伴侣真的只是一些无害的聊天机器人吗？" },
+      { "en": "Can AI companions actually cure loneliness?", "cn": "AI伴侣真的能治愈孤独吗？" },
+      { "en": "Is making AI more human-like always the right move?", "cn": "让AI变得越来越像人类，总是对的吗？" },
+      { "en": "Is the problem really just users being too dependent?", "cn": "真正的问题仅仅是因为“用户过度依赖”吗？" }
     ]
   },
   {
     "id": "links",
-    "title": "Links",
-    "description": "Further reading and external resources.",
+    "title": { "en": "Links", "cn": "相关链接" },
+    "description": { "en": "Further reading and external resources.", "cn": "延伸阅读及外部参考资源链接。" },
     "sections": [
-      "Academic Readings",
-      "News and Media",
-      "Platforms",
-      "Mental Health / Support Resources"
+      { "en": "Academic Readings", "cn": "学术著作" },
+      { "en": "News and Media", "cn": "新闻与媒体报道" },
+      { "en": "Platforms", "cn": "主流AI对话平台" },
+      { "en": "Mental Health / Support Resources", "cn": "心理健康支持相关资源" }
     ]
   }
 ]
-

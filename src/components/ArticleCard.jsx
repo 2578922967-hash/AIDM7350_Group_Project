@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function ArticleCard({ category, title, summary, sections = [], link, variant = "base", delay = 0 }) {
+  const { lang } = useLanguage();
   // Styles based on variant if needed
   const tagColors = {
     facts: "bg-[#7A9E7E]/10 text-[#7A9E7E]",
@@ -22,21 +24,24 @@ export default function ArticleCard({ category, title, summary, sections = [], l
       className="bg-white rounded-xl shadow-sm transition-all duration-300 p-6 flex flex-col items-start border border-[#E5E7EB] h-full"
     >
       <h3 className="font-serif text-2xl text-[#1F2937] mb-3 leading-tight font-bold">
-        {title}
+        {title && title[lang] ? title[lang] : title}
       </h3>
 
       <p className="text-[#6B7280] font-sans text-base leading-relaxed mb-6 line-clamp-3">
-        {summary}
+        {summary && summary[lang] ? summary[lang] : summary}
       </p>
 
       {sections && sections.length > 0 && (
         <ul className="mb-6 space-y-2 w-full">
-          {sections.map((sec, idx) => (
-            <li key={idx} className="text-sm text-[#6B7280] flex items-start gap-2">
-              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E5E7EB] shrink-0"></span>
-              <span>{sec}</span>
-            </li>
-          ))}
+          {sections.map((sec, idx) => {
+            const secText = sec && sec[lang] ? sec[lang] : sec;
+            return (
+              <li key={idx} className="text-sm text-[#6B7280] flex items-start gap-2">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E5E7EB] shrink-0"></span>
+                <span>{secText}</span>
+              </li>
+            );
+          })}
         </ul>
       )}
 
@@ -46,7 +51,7 @@ export default function ArticleCard({ category, title, summary, sections = [], l
           href={link || "#"}
           className="inline-flex items-center text-[#C08497] font-medium hover:text-[#B85C5C] transition-colors group"
         >
-          Read More
+          {lang === 'en' ? 'Read More' : '阅读更多'}
           <svg
             className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
             fill="none"

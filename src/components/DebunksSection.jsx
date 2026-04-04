@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { siteContent } from '../data/content';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const DebunkBlock = ({ myth, content, index }) => {
-  const [lang, setLang] = useState('en');
+  const { lang: globalLang } = useLanguage();
+  const [lang, setLang] = useState(globalLang);
+
+  useEffect(() => {
+      setLang(globalLang);
+  }, [globalLang]);
 
   return (
     <motion.article
@@ -16,7 +22,7 @@ const DebunkBlock = ({ myth, content, index }) => {
       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
         <h3 className="text-xl font-serif font-bold text-[#1F2937] pr-4">
           <span className="text-[#B85C5C] mr-2">Myth:</span>
-          {myth}
+          {myth && myth[lang] ? myth[lang] : myth}
         </h3>
         
         {/* Language Switcher */}
@@ -46,6 +52,7 @@ const DebunkBlock = ({ myth, content, index }) => {
 
 export default function DebunksSection() {
   const debunks = siteContent.debunks || [];
+  const { lang: globalLang } = useLanguage();
 
   return (
     <section id="debunks" className="scroll-mt-24 py-20 bg-white rounded-2xl border border-[#E5E7EB] shadow-sm">
@@ -57,7 +64,7 @@ export default function DebunksSection() {
             viewport={{ once: true }}
             className="text-[#B85C5C] font-bold text-sm uppercase tracking-widest mb-2 block"
           >
-            Part 3
+            {globalLang === 'en' ? 'Part 3' : '第三部分'}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +72,7 @@ export default function DebunksSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-serif font-bold text-[#1F2937] mb-6"
           >
-            Debunks
+            {globalLang === 'en' ? 'Debunks' : '辟谣'}
           </motion.h2>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -78,7 +85,7 @@ export default function DebunksSection() {
         <div className="space-y-5">
           {debunks.map((item, index) => (
             <DebunkBlock 
-              key={item.title}
+              key={item.title.en || index}
               myth={item.title}
               content={item.content}
               index={index}

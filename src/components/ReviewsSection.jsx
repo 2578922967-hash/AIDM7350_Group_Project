@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { siteContent } from '../data/content';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ContentBlock = ({ title, content, index }) => {
-    const [lang, setLang] = useState('en'); // 'en' or 'cn'
+    const { lang: globalLang } = useLanguage();
+    const [lang, setLang] = useState(globalLang); // 'en' or 'cn'
+
+    useEffect(() => {
+        setLang(globalLang);
+    }, [globalLang]);
 
     return (
         <motion.div 
@@ -16,7 +22,7 @@ const ContentBlock = ({ title, content, index }) => {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-6 border-b border-[#E5E7EB] pb-4">
                 <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#1F2937]">
                     <span className="text-[#D35269] mr-2 text-lg align-top">0{index + 1}.</span>
-                    {title}
+                    {title && title[lang] ? title[lang] : title}
                 </h3>
                 
                 {/* Language Switcher per block */}
@@ -48,6 +54,7 @@ const ContentBlock = ({ title, content, index }) => {
 };
 
 const ReviewsSection = () => {
+    const { lang: globalLang } = useLanguage();
     return (
         <section className="py-20 bg-[#F8F6F2] scroll-mt-24" id="reviews">
             <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,14 +65,14 @@ const ReviewsSection = () => {
                         whileInView={{ opacity: 1 }}
                         className="text-[#D35269] font-bold text-sm uppercase tracking-widest mb-2 block"
                     >
-                        Part 2
+                        {globalLang === 'en' ? 'Part 2' : '第二部分'}
                     </motion.span>
                     <motion.h2 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-serif font-bold text-[#1F2937] mb-6"
                     >
-                        Research Reviews
+                        {globalLang === 'en' ? 'Research Reviews' : '研究综述'}
                     </motion.h2>
                     <motion.div 
                         initial={{ scaleX: 0 }}

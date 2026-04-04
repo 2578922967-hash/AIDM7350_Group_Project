@@ -1,6 +1,7 @@
 // src/components/LinksSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 import linksData from '../data/links.json';
 
 // Helper component for section headers
@@ -69,6 +70,7 @@ const SupportItem = ({ href, name, description, mainColor, accentColor }) => (
 
 
 export default function LinksSection() {
+  const { lang } = useLanguage();
   // Defined Palette
   const colors = {
     olive: '#A4AF69',
@@ -107,7 +109,7 @@ export default function LinksSection() {
           transition={{ duration: 0.7 }}
           className="text-4xl font-serif font-bold text-[#1F2937] mb-12 text-center"
         >
-          Further Reading & Resources
+          {lang === 'en' ? 'Further Reading & Resources' : '延伸阅读与相关资源'}
         </motion.h2>
 
         <motion.div 
@@ -121,8 +123,8 @@ export default function LinksSection() {
             {/* 1. Academic Readings */}
             <motion.div variants={itemVariants}>
             <SectionHeader 
-                title="Academic Readings" 
-                subtitle="Key research papers on AI intimacy, ethics, and psychological impacts."
+                title={lang === 'en' ? 'Academic Readings' : '学术研究与报告'} 
+                subtitle={lang === 'en' ? 'Key research papers on AI intimacy, ethics, and psychological impacts.' : '关于AI伴侣、情感伦理和心理影响的关键学术研究。'}
                 color={colors.olive}
             />
             <div className="pl-2">
@@ -143,8 +145,8 @@ export default function LinksSection() {
             {/* 2. News and Media - Moved to its own full row */}
             <motion.div variants={itemVariants}>
                 <SectionHeader 
-                title="News & Media" 
-                subtitle="Recent coverage and public debates." 
+                title={lang === 'en' ? 'News & Media' : '新闻与媒体'} 
+                subtitle={lang === 'en' ? 'Recent coverage and public debates.' : '相关报道和公众讨论'} 
                 color={colors.rose}
                 />
                 <div className="pl-2">
@@ -164,8 +166,8 @@ export default function LinksSection() {
             {/* 3. Platforms - Moved to its own full row */}
             <motion.div variants={itemVariants}>
                 <SectionHeader 
-                title="Platforms" 
-                subtitle="The AI companion apps discussed." 
+                title={lang === 'en' ? 'Platforms' : '相关平台'} 
+                subtitle={lang === 'en' ? 'The AI companion apps discussed.' : '受关注的主流AI伴侣应用'} 
                 color={colors.olive}
                 />
                 <div className="pl-2">
@@ -185,8 +187,8 @@ export default function LinksSection() {
             {/* 4. Support Resources - Removed dark box, made consistent */}
             <motion.div variants={itemVariants}>
             <SectionHeader 
-                title="Mental Health & Support" 
-                subtitle="Resources for digital wellbeing and professional help." 
+                title={lang === 'en' ? 'Mental Health & Support' : '心理健康与支持资源'} 
+                subtitle={lang === 'en' ? 'Resources for digital wellbeing and professional help.' : '面向数字心理健康与专业援助的在线资源'} 
                 color={colors.rose}
             />
             <div className="grid sm:grid-cols-2 gap-4">

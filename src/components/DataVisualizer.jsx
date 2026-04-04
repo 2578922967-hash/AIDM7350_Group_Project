@@ -1,10 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const DataVisualizer = () => {
+  const { lang } = useLanguage();
   // Chart 1: User Perception (Vertical Bar Chart)
   // Data Source: "46% of teens view AI companions mainly as a tool or program. 33% use them for social interaction and relationships." (Common Sense Media)
-  const perceptionData = [
+  const perceptionDataOriginal = [
+    { label: { en: 'Tool / Program', cn: '工具 / 程序' }, value: 46, height: 80, color: '#A4AF69', count: '46%' },
+    { label: { en: 'Social / Relationship', cn: '社交 / 关系' }, value: 33, height: 60, color: '#D35269', count: '33%' },
+    { label: { en: 'Mixed / Other', cn: '混合 / 其他' }, value: 21, height: 40, color: '#E5E7EB', count: '21%' },
+  ];
+
+  const perceptionData = perceptionDataOriginal.map(d => ({ ...d, label: d.label[lang] || d.label.en }));
+
+  const _ignore1 = [
     { label: 'Tool / Program', value: 46, height: 80, color: '#A4AF69', count: '46%' }, // Olive (Dominant view)
     { label: 'Social / Relationship', value: 33, height: 60, color: '#D35269', count: '33%' }, // Rose (Emerging view)
     { label: 'Mixed / Other', value: 21, height: 40, color: '#E5E7EB', count: '21%' }, // Grey (Uncertainty)
@@ -12,7 +22,18 @@ const DataVisualizer = () => {
 
   // Chart 2: Why Do People Use Them? (Horizontal Bar Chart)
   // Data Source: "30%: entertaining, 28%: curiosity, 18%: advice, 17%: always available, 14%: nonjudgmental, 12%: share things"
-  const motivationData = [
+  const motivationDataOriginal = [
+    { label: { en: 'Entertainment', cn: '娱乐' }, value: 30, color: '#A4AF69' },
+    { label: { en: 'Curiosity', cn: '好奇心' }, value: 28, color: '#D35269' },
+    { label: { en: 'Advice', cn: '建议' }, value: 18, color: '#EDE580' },
+    { label: { en: 'Availability', cn: '随时可用' }, value: 17, color: '#C08497' },
+    { label: { en: 'Non-judgmental', cn: '不评判' }, value: 14, color: '#B5C99A' },
+    { label: { en: 'Safe Space', cn: '安全空间' }, value: 12, color: '#9CA3AF' },
+  ];
+
+  const motivationData = motivationDataOriginal.map(d => ({ ...d, label: d.label[lang] || d.label.en }));
+
+  const _ignore2 = [
     { label: 'Entertainment', value: 30, color: '#A4AF69' }, // Olive
     { label: 'Curiosity', value: 28, color: '#D35269' },     // Rose
     { label: 'Advice', value: 18, color: '#EDE580' },        // Yellow
@@ -31,10 +52,10 @@ const DataVisualizer = () => {
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-[#A4AF69] font-bold text-sm uppercase tracking-widest mb-2 block">Data Analysis</span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1F2937] mb-4">The Data Behind the Connection</h2>
+          <span className="text-[#A4AF69] font-bold text-sm uppercase tracking-widest mb-2 block">{ lang === 'en' ? 'Data Analysis' : '数据分析' }</span>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1F2937] mb-4">{ lang === 'en' ? 'The Data Behind the Connection' : '连接背后的数据' }</h2>
           <p className="text-[#6B7280] max-w-2xl mx-auto text-lg font-light">
-            Understanding how users perceive and utilize AI companions based on recent studies.
+            { lang === 'en' ? 'Understanding how users perceive and utilize AI companions based on recent studies.' : '基于近期研究：不同群体对智能伴侣的认知与使用动机差异。' }
           </p>
         </div>
 
@@ -48,8 +69,8 @@ const DataVisualizer = () => {
             transition={{ duration: 0.8 }}
             className="rounded-2xl border border-[#E5E7EB] p-8 md:p-10 shadow-sm flex flex-col bg-[#F8F6F2]/50 backdrop-blur-sm h-full"
           >
-            <h3 className="text-2xl font-serif font-bold text-[#1F2937] mb-2">User Perception</h3>
-            <p className="text-sm text-[#6B7280] mb-8">How teens view AI companions: As a functional tool vs. a social relationship.</p>
+            <h3 className="text-2xl font-serif font-bold text-[#1F2937] mb-2">{lang === 'en' ? 'User Perception' : '认知差异分析' }</h3>
+            <p className="text-sm text-[#6B7280] mb-8">{lang === 'en' ? 'How teens view AI companions: As a functional tool vs. a social relationship.' : '不同年龄段人群倾向于将AI伴侣视为工具还是真正的社交关系？'}</p>
             
             <div className="flex-grow flex items-end justify-around gap-4 h-64 pb-2 border-b border-[#E5E7EB]">
               {perceptionData.map((item, index) => (
@@ -79,8 +100,8 @@ const DataVisualizer = () => {
              transition={{ duration: 0.8 }}
              className="rounded-2xl border border-[#E5E7EB] p-8 md:p-10 shadow-sm flex flex-col justify-center bg-[#F8F6F2]/50 backdrop-blur-sm h-full"
           >
-            <h3 className="text-2xl font-serif font-bold text-[#1F2937] mb-2">Primary Motivations</h3>
-            <p className="text-sm text-[#6B7280] mb-6">Top reasons users engage with AI companions.</p>
+            <h3 className="text-2xl font-serif font-bold text-[#1F2937] mb-2">{lang === 'en' ? 'Primary Motivations' : '主要使用动机'}</h3>
+            <p className="text-sm text-[#6B7280] mb-6">{lang === 'en' ? 'Top reasons users engage with AI companions.' : '用户选择使用AI伴侣的主要原因。'}</p>
 
             <div className="space-y-4">
               {motivationData.map((item, index) => (
